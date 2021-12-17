@@ -104,6 +104,10 @@ namespace DrinkApp.UserInterface
                 if (drinkInfo == null)
                     throw new InvalidMenuItemException($"Invalid menu item selected: {drinkId}.");
 
+                _console.SetForegroundColor(ConsoleColor.Blue);
+                _console.WriteLine($"1 x {drinkInfo.Name} coming right up!");
+                _console.ResetColor();
+
                 _console.WriteLine("How many sugars would you like?");
 
                 if (!short.TryParse(_console.ReadLine(), out var teaSpoonsOfSugarToAdd))
