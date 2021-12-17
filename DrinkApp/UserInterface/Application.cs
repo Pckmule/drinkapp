@@ -181,7 +181,7 @@ namespace DrinkApp.UserInterface
 
         public void DisplayMenuItemDoesNotExistMessage()
         {
-            _console.WriteLine("That item doesn't exist on the menu?");
+            _console.WriteLine("That item doesn't exist on the menu.");
         }
 
         public void DisplayLowBeanWarningMessage(int beansLeft)
