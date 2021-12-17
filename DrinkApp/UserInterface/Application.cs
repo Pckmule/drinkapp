@@ -86,9 +86,12 @@ namespace DrinkApp.UserInterface
 
                 if (wantsSomethingElse?.ToLower() == YesInput)
                     _console.WriteLine("OK. What would you like?");
-                else 
+                else
                 {
+                    _console.SetForegroundColor(ConsoleColor.Cyan);
                     _console.WriteLine("Have a great day! Next customer please!");
+                    _console.ResetColor();
+
                     DisplayWelcomeMessage();
                     DisplayMenu();
                 }
